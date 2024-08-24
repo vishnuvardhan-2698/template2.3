@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+     </head>
+     <style>
+        body{
+    margin:0%;
+}
+img{
+    width:50px;
+}
+#checkbox{
+    display: none;
+}
+#checkbox:checked+.container{
+    transform: translateX(300px) translateY(0px)
+}
+.container{
+    width:300px;
+    height:400px;
+    position: absolute;
+    left:-300px;
+    transition:all 1s ease;
+    border-radius: 0px 10px 10px 0px;
+}
+
+h1{
+    margin: 35px;
+    border: 2px solid ;
+    background-color: gold;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.h1:hover{
+    background-color: lawngreen;
+    color: black;
+    text-shadow: 2px 2px 4px magenta;
+}
+.h2:hover{
+    background-color:palevioletred;
+    color: black;
+    text-shadow: 2px 2px 4px darkturquoise;
+}
+.h3:hover{
+    background-color:aqua;
+    color: black;
+    text-shadow: 2px 2px 4px green;
+}
+.h4:hover{
+    background-color: darkcyan;
+    color:black;
+    text-shadow: 2px 2px 4px cornflowerblue;
+}
+     </style>
+<body>
+    <label for="checkbox">
+        <img src="../hamburger icon.png" alt="">
+    </label>
+    <input type="checkbox" id="checkbox">
+    <div class="container">
+        <h1 class="h1">PYTHON</h1>
+        <h1 class="h2">JAVA</h1>
+        <h1 class="h3">JAVASCRIPT</h1>
+        <h1 class="h4">SQL</h1>
+    </div>
+   
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

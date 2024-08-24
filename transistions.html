@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TransfORMS</title>
+    <style>
+        img {
+            display: block;
+            width: 200px;
+            height: 170px;
+            border: 5px solid black;
+            box-shadow: 2px 2px 4px rgb(13, 202, 28);
+            transition: transform 0.3s ease;
+            border-radius: 20px;
+        }
+        .container_2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            background-color: rgb(134, 133, 127);
+        }
+        .container {
+            border: 2px solid;
+            width: 400px;
+            height: 400px;
+            padding: 40px;
+            background-color: white;
+            
+        }
+        .container_1 {
+            display: flex;
+            gap: 20px;
+        }
+        .container_1 label {
+            border: 10px solid greenyellow;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .container_1 label:hover {
+            background-color: red;
+            color: white;
+        }
+        #rotate,#scale,#skew,#matrix {
+            display: none;
+        }
+
+        #rotate:hover ~ .img{
+            transform: rotate(360deg);
+            transition: 4s ease;
+        }
+
+        #scale:hover ~ .img{
+            transform: scale(2);
+        }
+
+        #skew:hover ~ .img{
+            transform: skewX(20deg);
+        }
+
+        #matrix:hover ~ .img{
+            transform: matrix(1, 0.5, 0.5, 1, 0, 0);
+        }
+        .img{
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_2">
+        <div class="container">
+            <input type="checkbox" id="rotate">
+            <input type="checkbox" id="scale">
+            <input type="checkbox" id="skew">
+            <input type="checkbox" id="matrix">
+
+            <div class="container_1">
+                <label for="rotate" class="rotate">Rotate</label>
+                <label for="scale" class="scale">Scale</label>
+                <label for="skew" class="skew">Skew</label>
+                <label for="matrix" class="matrix">Matrix</label>
+            </div>
+            <div class="img">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.iPKU3ewLiFfolbj_vHY5dgHaHa&pid=Api&P=0&h=220" alt="mahesh">
+                </div>
+        </div>
+    </div>
+</body>
+</html>
